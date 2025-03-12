@@ -3,6 +3,7 @@ import Navbar from "../components/Navbar";
 import Intro from "../components/Into";
 import About from "../components/About";
 import Skills from "../components/Skills";
+import Projects from "../components/Projects";
 
 const MainLayout = () => {
     return (
@@ -11,6 +12,7 @@ const MainLayout = () => {
             <Intro></Intro>
             <About></About>
             <Skills></Skills>
+            <Projects></Projects>
             {/* <Footer></Footer> */}
         </div>
     );
