@@ -5,22 +5,52 @@ const Navbar = () => {
   const links = (
     <>
       <li className="font-semibold">
-        <NavLink to="/">Home</NavLink>
+        <NavLink
+          to="/"
+          className="text-white hover:text-[#BFBFBF] transition duration-300"
+        >
+          Home
+        </NavLink>
       </li>
       <li className="font-semibold">
-        <NavLink to="/">About</NavLink>
+        <NavLink
+          to="/"
+          className="text-white hover:text-[#BFBFBF] transition duration-300"
+        >
+          About
+        </NavLink>
       </li>
       <li className="font-semibold">
-        <NavLink to="/">Skills</NavLink>
+        <NavLink
+          to="/"
+          className="text-white hover:text-[#BFBFBF] transition duration-300"
+        >
+          Skills
+        </NavLink>
       </li>
       <li className="font-semibold">
-        <NavLink to="/">Achievements</NavLink>
+        <NavLink
+          to="/"
+          className="text-white hover:text-[#BFBFBF] transition duration-300"
+        >
+          Achievements
+        </NavLink>
       </li>
       <li className="font-semibold">
-        <NavLink to="/">Projects</NavLink>
+        <NavLink
+          to="/"
+          className="text-white hover:text-[#BFBFBF] transition duration-300"
+        >
+          Projects
+        </NavLink>
       </li>
       <li className="font-semibold">
-        <NavLink to="/">Contact</NavLink>
+        <NavLink
+          to="/"
+          className="text-white hover:text-[#BFBFBF] transition duration-300"
+        >
+          Contact
+        </NavLink>
       </li>
     </>
   );
@@ -64,7 +94,9 @@ const Navbar = () => {
         <ul className="menu menu-horizontal px-1">{links}</ul>
       </div>
       <div className="navbar-end">
-        <button className="btn md:mr-4 mr-2">Resume</button>
+        <button className="bg-[#FFFFFF] btn text-[#0D0D0D] hover:bg-[#E6E6E6] font-semibold px-4 py-2 rounded-lg transition duration-300 md:mr-4 mr-2">
+          Resume
+        </button>
       </div>
     </div>
   );
