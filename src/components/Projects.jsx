@@ -17,7 +17,7 @@ const Projects = () => {
             <img src={logixshuvoImg} alt="Shoes" />
           </figure>
           <div className="card-body">
-            <h2 className="card-title">LoxgiXShuvo</h2>
+            <h2 className="card-title">LogiXShuvo</h2>
             <p className="text-justify">
               LogiXShuvo is a modern MERN stack application that streamlines
               parcel booking, tracking, and management. It provides role-based
