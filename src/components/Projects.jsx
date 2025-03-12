@@ -6,13 +6,16 @@ import { MdArrowOutward } from "react-icons/md";
 
 const Projects = () => {
   return (
-    <div id="projects" className="bg-[#111111] px-4 pt-2 md:pt-12 max-w-screen-xl mx-auto">
-      <h1 className="text-lg md:text-3xl font-bold text-center my-3 md:my-8">
+    <div
+      id="projects"
+      className="bg-[#111111] px-4 pt-2 md:pt-12 max-w-screen-xl mx-auto"
+    >
+      <h1 className="text-lg md:text-3xl font-bold text-center my-3 md:my-8 text-white">
         Latest Projects
       </h1>
       <div className="grid gap-4 grid-cols-1 md:grid-cols-3">
         {/* PROJECT 1 */}
-        <div className="card card-compact  bg-base-100 shadow-xl">
+        <div className="card card-compact  bg-[#0d0d0d] shadow-xl border-[#1A1A1A] border-2">
           <figure>
             <img src={logixshuvoImg} alt="Shoes" />
           </figure>
@@ -35,7 +38,7 @@ const Projects = () => {
           </div>
         </div>
         {/* PROJECT 2 */}
-        <div className="card card-compact  bg-base-100 shadow-xl">
+        <div className="card card-compact  bg-[#0d0d0d] shadow-xl border-[#1A1A1A] border-2">
           <figure>
             <img src={shuvolingoImg} alt="Shoes" />
           </figure>
@@ -57,7 +60,7 @@ const Projects = () => {
           </div>
         </div>
         {/* PROJECT 3 */}
-        <div className="card card-compact  bg-base-100 shadow-xl">
+        <div className="card card-compact  bg-[#0d0d0d] shadow-xl border-[#1A1A1A] border-2">
           <figure>
             <img src={borolokerImg} alt="Shoes" />
           </figure>

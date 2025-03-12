@@ -3,7 +3,7 @@ import React from "react";
 const About = () => {
   return (
     <div id="about" className="bg-[#111111] px-4 pt-2 md:pt-12 max-w-screen-xl mx-auto">
-      <h1 className="text-lg md:text-3xl font-bold text-center my-3 md:my-6">About Me</h1>
+      <h1 className="text-lg md:text-3xl font-bold text-center my-3 md:my-6 text-white">About Me</h1>
       <p className=" text-[10px] md:text-lg text-gray-400 text-justify leading-relaxed">
         My journey in web development began with a fascination for how digital experiences are built. Over time, that curiosity evolved into a passion for crafting modern, scalable, and user-friendly applications that seamlessly blend creativity with functionality. 
         <br></br>

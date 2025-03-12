@@ -16,10 +16,10 @@ const Into = () => {
           className="w-[120px] md:w-64 rounded-lg shadow-2xl"
         />
         <div>
-          <h1 className="text-[15px] md:text-5xl font-bold">
+          <h1 className="text-[15px] md:text-5xl font-bold text-white">
             Hi, I'm Saheen Alam Shuvo
           </h1>
-          <h1 className="text-[11px] md:text-3xl mt-1 md:mt-6 font-semibold">
+          <h1 className="text-[11px] md:text-3xl mt-1 md:mt-6 font-semibold text-white">
             A Passionate MERN Stack Developer
           </h1>
           <p className="text-[8px] md:text-base text-justify mt-2 md:py-6 md:pr-10 text-gray-400">

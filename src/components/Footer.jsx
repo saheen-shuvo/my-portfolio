@@ -4,7 +4,7 @@ const Footer = () => {
   return (
     <footer className="footer sm:footer-horizontal footer-center bg-[#0d0d0d] text-base-content p-4">
       <aside>
-        <p>
+        <p className="text-white">
           Copyright © {new Date().getFullYear()} - All right reserved.
         </p>
       </aside>
