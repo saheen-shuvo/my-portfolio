@@ -5,52 +5,19 @@ const Navbar = () => {
   const links = (
     <>
       <li className="font-semibold">
-        <NavLink
-          to="/"
-          className="text-white hover:text-[#BFBFBF] transition duration-300"
-        >
-          Home
-        </NavLink>
+      <a href="#home">Home</a>
       </li>
       <li className="font-semibold">
-        <NavLink
-          to="/"
-          className="text-white hover:text-[#BFBFBF] transition duration-300"
-        >
-          About
-        </NavLink>
+        <a href="#about">About</a>
       </li>
       <li className="font-semibold">
-        <NavLink
-          to="/"
-          className="text-white hover:text-[#BFBFBF] transition duration-300"
-        >
-          Skills
-        </NavLink>
+      <a href="#skills">Skills</a>
       </li>
       <li className="font-semibold">
-        <NavLink
-          to="/"
-          className="text-white hover:text-[#BFBFBF] transition duration-300"
-        >
-          Achievements
-        </NavLink>
+      <a href="#projects">Projects</a>
       </li>
       <li className="font-semibold">
-        <NavLink
-          to="/"
-          className="text-white hover:text-[#BFBFBF] transition duration-300"
-        >
-          Projects
-        </NavLink>
-      </li>
-      <li className="font-semibold">
-        <NavLink
-          to="/"
-          className="text-white hover:text-[#BFBFBF] transition duration-300"
-        >
-          Contact
-        </NavLink>
+      <a href="#contact">Contact</a>
       </li>
     </>
   );

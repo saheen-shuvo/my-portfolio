@@ -6,7 +6,7 @@ import { MdArrowOutward } from "react-icons/md";
 
 const Projects = () => {
   return (
-    <div className="bg-[#111111] px-4 pt-2 md:pt-12 max-w-screen-xl mx-auto">
+    <div id="projects" className="bg-[#111111] px-4 pt-2 md:pt-12 max-w-screen-xl mx-auto">
       <h1 className="text-lg md:text-3xl font-bold text-center my-3 md:my-8">
         Latest Projects
       </h1>

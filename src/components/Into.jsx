@@ -6,7 +6,10 @@ import facebookIcon from "../assets/images/fb icon.png";
 
 const Into = () => {
   return (
-    <div className="hero pt-16 md:pt-28 bg-[#111111] max-w-screen-xl mx-auto">
+    <div
+      id="home"
+      className="hero pt-16 md:pt-28 bg-[#111111] max-w-screen-xl mx-auto"
+    >
       <div className="hero-content flex flex-row-reverse">
         <img
           src={myFormalImg}
@@ -30,7 +33,11 @@ const Into = () => {
             <a href="https://www.facebook.com/share/1BYWbr36dS/?mibextid=wwXIfr">
               {" "}
               <button>
-                <img className="w-[26px] md:w-[50px]" src={facebookIcon} alt="" />
+                <img
+                  className="w-[26px] md:w-[50px]"
+                  src={facebookIcon}
+                  alt=""
+                />
               </button>
             </a>
             {/* Github */}
@@ -51,9 +58,12 @@ const Into = () => {
             <button className="bg-[#FFFFFF] btn-xs text-[#0D0D0D] hover:bg-[#E6E6E6] font-semibold px-2 py-1 md:px-4 md:py-2 rounded-md md:rounded-lg transition duration-300 mr-1 md:mr-2 text-[10px] md:text-[12px]">
               Let's Connect
             </button>
-            <button className="bg-[#FFFFFF] btn-xs text-[#0D0D0D] hover:bg-[#E6E6E6] font-semibold px-2 py-1 md:px-4 md:py-2 rounded-md md:rounded-lg transition duration-300 text-[10px] md:text-[12px]">
-              View Projects
-            </button>
+            <a href="#projects">
+              {" "}
+              <button className="bg-[#FFFFFF] btn-xs text-[#0D0D0D] hover:bg-[#E6E6E6] font-semibold px-2 py-1 md:px-4 md:py-2 rounded-md md:rounded-lg transition duration-300 text-[10px] md:text-[12px]">
+                View Projects
+              </button>
+            </a>
           </div>
         </div>
       </div>
