@@ -6,7 +6,7 @@ import facebookIcon from "../assets/images/fb icon.png";
 
 const Into = () => {
   return (
-    <div className="hero min pt-16 md:pt-28 bg-[#111111]">
+    <div className="hero pt-16 md:pt-28 bg-[#111111] max-w-screen-xl mx-auto">
       <div className="hero-content flex flex-row-reverse">
         <img
           src={myFormalImg}
