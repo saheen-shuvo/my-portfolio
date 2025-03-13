@@ -7,17 +7,17 @@ import Projects from "../components/Projects";
 import Contact from "../components/Contact";
 
 const MainLayout = () => {
-    return (
-        <div>
-            <Navbar></Navbar>
-            <Intro></Intro>
-            <About></About>
-            <Skills></Skills>
-            <Projects></Projects>
-            <Contact></Contact>
-            <Footer></Footer>
-        </div>
-    );
+  return (
+    <div>
+      <Navbar></Navbar>
+      <Intro></Intro>
+      <About></About>
+      <Skills></Skills>
+      <Projects></Projects>
+      <Contact></Contact>
+      <Footer></Footer>
+    </div>
+  );
 };
 
 export default MainLayout;
