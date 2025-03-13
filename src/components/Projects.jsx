@@ -29,7 +29,7 @@ const Projects = () => {
               efficiency.
             </p>
             <div className="card-actions justify-end">
-              <Link className="w-full" to='/logixshuvo'>
+              <Link className="w-full" to="/logixshuvo">
                 <button className="bg-[#FFFFFF] btn text-[#0D0D0D] w-full hover:bg-[#E6E6E6] font-semibold px-4 py-2 rounded-lg transition duration-300">
                   View Details
                   <MdArrowOutward />
@@ -51,12 +51,12 @@ const Projects = () => {
               profiles, book sessions, manage bookings, and add tutorials.
             </p>
             <div className="card-actions justify-end">
-              <a className="w-full" href="https://shuvolingo-client.web.app/">
-                {" "}
-                <button className="bg-[#FFFFFF] btn text-[#0D0D0D] hover:bg-[#E6E6E6] font-semibold px-4 py-2 rounded-lg transition duration-300 w-full">
-                  Visit Now <MdArrowOutward />
+              <Link className="w-full" to="/shuvolingo">
+                <button className="bg-[#FFFFFF] btn text-[#0D0D0D] w-full hover:bg-[#E6E6E6] font-semibold px-4 py-2 rounded-lg transition duration-300">
+                  View Details
+                  <MdArrowOutward />
                 </button>
-              </a>
+              </Link>
             </div>
           </div>
         </div>
@@ -74,16 +74,12 @@ const Projects = () => {
               confirmation modal.
             </p>
             <div className="card-actions justify-end">
-              <a
-                className="w-full"
-                href="https://boroloker-gadgets.netlify.app/"
-              >
-                {" "}
-                <button className="bg-[#FFFFFF] btn text-[#0D0D0D] hover:bg-[#E6E6E6] font-semibold px-4 py-2 rounded-lg transition duration-300 w-full">
-                  Visit Now
+              <Link className="w-full" to="/borolokergadget">
+                <button className="bg-[#FFFFFF] btn text-[#0D0D0D] w-full hover:bg-[#E6E6E6] font-semibold px-4 py-2 rounded-lg transition duration-300">
+                  View Details
                   <MdArrowOutward />
                 </button>
-              </a>
+              </Link>
             </div>
           </div>
         </div>
