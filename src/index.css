@@ -1,6 +1,8 @@
 @import "tailwindcss";
 @plugin "daisyui";
-
+html {
+  scroll-behavior: smooth;
+}
 body {
   background-color: #111111;
 }
@@ -26,12 +28,50 @@ body {
   border: 2px solid #ffa500;
   box-shadow: 0 0 5px #ffa500, 0 0 5px rgba(255, 165, 0, 0.5);
 }
+.intro-tags {
+  display: inline-block;
+}
+.intro-tags span {
+  position: relative;
+  display: inline-block;
+  color: transparent;
+  -webkit-text-stroke: 0.7px #ff6a00;
+  animation: display-text 16s linear infinite;
+  animation-delay: calc(-4s * var(--i));
+}
+@keyframes display-text {
+  25%,
+  100% {
+    display: none;
+  }
+}
+.intro-tags span::before {
+  content: attr(data-text);
+  position: absolute;
+  width: 0;
+  border-right: 2px solid #ff6a00;
+  color: #ff6a00;
+  white-space: nowrap;
+  overflow: hidden;
+  animation: fill-text 4s linear infinite;
+}
+@keyframes fill-text {
+  10%,
+  100% {
+    width: 0;
+  }
+  70%,
+  90% {
+    width: 100%;
+  }
+}
 #intro-btn {
   background: #fff;
   border: 2px solid #fff;
   box-shadow: 0 0 4px #fff;
   color: #000000;
   text-decoration: none;
+  transition: 0.5s;
 }
 #intro-btn:hover {
   background: transparent;
@@ -51,9 +91,9 @@ body {
   border: 2px solid #fff;
   animation: glowing 2s ease-in-out infinite;
 }
-#intro-container {
-  background: rgba(255, 255, 255, 0.02);
-  border: 2px solid rgba(255, 255, 255, 0.1);
+#intro-img:hover {
+  box-shadow: 0 0 5px #ff6a00;
+  border: 2px solid #ff6a00;
 }
 @keyframes glowing {
   0% {
@@ -65,4 +105,8 @@ body {
   100% {
     box-shadow: 0 0 5px #fff, 0 0 10px #fff;
   }
+}
+#intro-container {
+  background: rgba(255, 255, 255, 0.02);
+  border: 2px solid rgba(255, 255, 255, 0.1);
 }
