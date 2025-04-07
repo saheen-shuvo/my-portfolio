@@ -1,7 +1,7 @@
 import React from "react";
-import logixshuvoImg from "../assets/images/logixshuvo img.png";
-import shuvolingoImg from "../assets/images/shuvolingo img.png";
-import borolokerImg from "../assets/images/boroloker img.png";
+import logixshuvoImg from "../assets/images/logixshuvo.png";
+import shuvolingoImg from "../assets/images/shuvolingo.png";
+import shuvobitesImg from "../assets/images/shuvobites.png";
 import { MdArrowOutward } from "react-icons/md";
 import { Link } from "react-router-dom";
 
@@ -63,18 +63,17 @@ const Projects = () => {
         {/* PROJECT 3 */}
         <div className="card card-compact  bg-[#0d0d0d] shadow-xl border-[#1A1A1A] border-2">
           <figure>
-            <img src={borolokerImg} alt="Shoes" />
+            <img src={shuvobitesImg} alt="Shoes" />
           </figure>
           <div className="card-body">
-            <h2 className="card-title  text-white">Boroloker Gadget</h2>
+            <h2 className="card-title  text-white">Shuvo Bites</h2>
             <p className="text-justify text-gray-300">
-              A web application built with React that allows users to view
-              products, add them to their cart, and proceed to checkout. The app
-              features sorting, total cost calculation, and a purchase
-              confirmation modal.
+              Shuvo Bites is a comprehensive restaurant management system
+              designed to streamline restaurant operations. It features tools
+              for managing orders, reservations, menus, and staff schedules.
             </p>
             <div className="card-actions justify-end">
-              <Link className="w-full" to="/borolokergadget">
+              <Link className="w-full" to="/shuvobites">
                 <button className="bg-[#FFFFFF] btn text-[#0D0D0D] w-full hover:bg-[#E6E6E6] font-semibold px-4 py-2 rounded-lg transition duration-300">
                   View Details
                   <MdArrowOutward />

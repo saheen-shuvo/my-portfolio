@@ -2,7 +2,7 @@ import React from "react";
 import { GoHome } from "react-icons/go";
 import { MdArrowOutward } from "react-icons/md";
 import { Link } from "react-router-dom";
-import shuvolingoImg from "../assets/images/shuvolingo img.png";
+import shuvolingoImg from "../assets/images/shuvolingo.png";
 
 const Shuvolingo = () => {
   return (

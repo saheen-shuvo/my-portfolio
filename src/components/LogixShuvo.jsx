@@ -1,5 +1,5 @@
 import React from "react";
-import logixshuvoImg from "../assets/images/logixshuvo img.png";
+import logixshuvoImg from "../assets/images/logixshuvo.png";
 import { MdArrowOutward } from "react-icons/md";
 import { GoHome } from "react-icons/go";
 import { Link } from "react-router-dom";
@@ -68,13 +68,13 @@ const LogixShuvo = () => {
             </span>
           </p>
           <div className="flex justify-center my-6">
-            <a className="" href="https://shuvolingo-client.web.app/">
+            <a className="" href="https://logixshuvo.web.app/">
               {" "}
               <button className="bg-[#FFFFFF] btn text-[#0D0D0D] hover:bg-[#E6E6E6] font-semibold px-4 py-2 rounded-lg transition duration-300 w-full">
                 Visit Now <MdArrowOutward />
               </button>
             </a>
-            <Link to='/'>
+            <Link to="/">
               <button className="bg-[#FFFFFF] btn text-[#0D0D0D] hover:bg-[#E6E6E6] font-semibold px-4 py-2 rounded-lg transition duration-300 ml-2">
                 Go Home <GoHome />
               </button>

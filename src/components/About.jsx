@@ -28,7 +28,7 @@ const About = () => {
           }}
         >
           {" "}
-          My journey in web development began with a fascination for how digital
+          My journey in <span className="font-semibold text-[#ff6a00bd]">Web Development</span> began with a fascination for how digital
           experiences are built. Over time, that curiosity evolved into a
           passion for crafting modern, scalable, and user-friendly applications
           that seamlessly blend creativity with functionality.
