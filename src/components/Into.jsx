@@ -1,4 +1,5 @@
 import React from "react";
+import { motion } from "framer-motion";
 import myFormalImg from "../assets/images/my-portfolio-wb.png";
 import { FaFacebookF, FaGithub } from "react-icons/fa";
 import { GrLinkedinOption } from "react-icons/gr";
@@ -9,7 +10,13 @@ const Into = () => {
       id="home"
       className="hero pt-16 md:pt-28 bg-[#111111] max-w-screen-xl mx-auto"
     >
-      <div
+      <motion.div
+        initial={{ opacity: 0, scale: 0.7 }}
+        animate={{ opacity: 1, scale: 1 }}
+        transition={{
+          duration: 1.2,
+          ease: [0.22, 1, 0.36, 1],
+        }}
         id="intro-container"
         className="border-2  rounded-xl md:rounded-3xl lg:p-16 mx-2 md:mx-4"
       >
@@ -24,10 +31,19 @@ const Into = () => {
               Hi, I'm Saheen Alam Shuvo
             </h1>
             <h1 className="intro-tags text-[11px] md:text-3xl mt-1 md:mt-6 font-semibold text-white">
-              A Dedicated <span style={{ "--i": 4 }} data-text="MERN Stack Developer">MERN Stack Developer</span>
-              <span style={{ "--i": 3 }} data-text="Frontend Developer">Frontend Developer</span>
-              <span style={{ "--i": 2 }} data-text="JavaScript Developer">JavaScript Developer</span>
-              <span style={{ "--i": 1 }} data-text="React Developer">React Developer</span>
+              A Dedicated{" "}
+              <span style={{ "--i": 4 }} data-text="MERN Stack Developer">
+                MERN Stack Developer
+              </span>
+              <span style={{ "--i": 3 }} data-text="Frontend Developer">
+                Frontend Developer
+              </span>
+              <span style={{ "--i": 2 }} data-text="JavaScript Developer">
+                JavaScript Developer
+              </span>
+              <span style={{ "--i": 1 }} data-text="React Developer">
+                React Developer
+              </span>
             </h1>
             <p className="text-[8px] md:text-base text-justify mt-2 md:py-4 md:pr-10 text-gray-400">
               I build modern, scalable web applications using React, Node.js,
@@ -78,7 +94,7 @@ const Into = () => {
             </div>
           </div>
         </div>
-      </div>
+      </motion.div>
     </div>
   );
 };

@@ -1,4 +1,5 @@
 import React from "react";
+import { motion } from "framer-motion";
 
 const Navbar = () => {
   const links = (
@@ -22,8 +23,13 @@ const Navbar = () => {
   );
 
   return (
-    <div className="flex justify-center navbar bg-[#0d0d0d8d] fixed">
-      <div className="navbar fixed z-10 max-w-screen-xl">
+    <div className="flex justify-center navbar bg-[#0d0d0d8d] fixed z-9999">
+      <motion.div
+        initial={{ opacity: 0, y: -50 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6, ease: "easeOut" }}
+        className="navbar fixed z-9999 max-w-screen-xl"
+      >
         {" "}
         <div className="navbar-start">
           <div className="dropdown">
@@ -66,11 +72,14 @@ const Navbar = () => {
           <ul className="menu menu-horizontal px-1">{links}</ul>
         </div>
         <div className="navbar-end">
-          <button id="nav-btn" className="bg-[#FFFFFF] btn btn-sm md:btn-md text-[#0D0D0D] hover:bg-[#E6E6E6] font-semibold px-4 py-2 rounded-lg transition duration-300 md:mr-4 mr-2">
+          <button
+            id="nav-btn"
+            className="bg-[#FFFFFF] btn btn-sm md:btn-md text-[#0D0D0D] hover:bg-[#E6E6E6] font-semibold px-4 py-2 rounded-lg transition duration-300 md:mr-4 mr-2"
+          >
             Resume
           </button>
         </div>
-      </div>
+      </motion.div>
     </div>
   );
 };
