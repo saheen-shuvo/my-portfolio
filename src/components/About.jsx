@@ -1,6 +1,19 @@
 import React from "react";
 import { motion } from "framer-motion";
 
+const textVariants = {
+  hidden: { opacity: 0, y: 30 },
+  visible: (delay = 0) => ({
+    opacity: 1,
+    y: 0,
+    transition: {
+      duration: 0.6,
+      ease: [0.25, 0.1, 0.25, 1],
+      delay,
+    },
+  }),
+};
+
 const About = () => {
   return (
     <div
@@ -18,32 +31,30 @@ const About = () => {
       </motion.h1>
       <p className=" text-[10px] md:text-lg text-gray-400 text-justify leading-relaxed">
         <motion.span
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
+          initial="hidden"
+          whileInView="visible"
+          custom={0.2}
           viewport={{ once: true, amount: 0.2 }}
-          transition={{
-            duration: 0.6,
-            ease: [0.25, 0.1, 0.25, 1],
-            delay: 0.2,
-          }}
+          variants={textVariants}
         >
           {" "}
-          My journey in <span className="font-semibold text-[#ff6a00bd]">Web Development</span> began with a fascination for how digital
-          experiences are built. Over time, that curiosity evolved into a
-          passion for crafting modern, scalable, and user-friendly applications
-          that seamlessly blend creativity with functionality.
+          My journey in{" "}
+          <span className="font-semibold text-[#ff6a00bd]">
+            Web Development
+          </span>{" "}
+          began with a fascination for how digital experiences are built. Over
+          time, that curiosity evolved into a passion for crafting modern,
+          scalable, and user-friendly applications that seamlessly blend
+          creativity with functionality.
         </motion.span>
         <br></br>
         <br></br>
         <motion.span
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
+          initial="hidden"
+          whileInView="visible"
+          custom={0.3}
           viewport={{ once: true, amount: 0.2 }}
-          transition={{
-            duration: 0.6,
-            ease: [0.25, 0.1, 0.25, 1],
-            delay: 0.2,
-          }}
+          variants={textVariants}
         >
           I specialize in React.js, Node.js, Express, and MongoDB, developing
           applications that are not only visually engaging but also highly
@@ -54,13 +65,11 @@ const About = () => {
         <br></br>
         <br></br>
         <motion.span
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
+          initial="hidden"
+          whileInView="visible"
+          custom={0.4}
           viewport={{ once: true, amount: 0.2 }}
-          transition={{
-            duration: 0.6,
-            ease: [0.25, 0.1, 0.25, 1],
-          }}
+          variants={textVariants}
         >
           {" "}
           Beyond development, I’m passionate about working for people and making

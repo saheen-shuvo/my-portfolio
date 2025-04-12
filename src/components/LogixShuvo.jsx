@@ -67,8 +67,18 @@ const LogixShuvo = () => {
               Implementing email/SMS notifications for status updates.
             </span>
           </p>
+          <p className="py-3  text-sm md:text-base">
+            Visit Source Code:{" "}
+            <span className=" link text-blue-400 hover:text-orange-500">
+              <a target="_blank"  href="https://github.com/saheen-shuvo/logixshuvo-client">Client Side Code</a>
+            </span>{" "}
+            ||{" "}
+            <span className="link text-blue-400 hover:text-orange-500">
+              <a target="_blank" href="https://github.com/saheen-shuvo/logixshuvo-server">Server Side Code</a>
+            </span>
+          </p>
           <div className="flex justify-center my-6">
-            <a className="" href="https://logixshuvo.web.app/">
+            <a target="_blank" className="" href="https://logixshuvo.web.app/">
               {" "}
               <button className="bg-[#FFFFFF] btn text-[#0D0D0D] hover:bg-[#E6E6E6] font-semibold px-4 py-2 rounded-lg transition duration-300 w-full">
                 Visit Now <MdArrowOutward />

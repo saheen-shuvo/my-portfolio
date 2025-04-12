@@ -9,7 +9,7 @@ const Projects = () => {
   return (
     <div
       id="projects"
-      className="bg-[#111111] px-4 md:pt-12 max-w-screen-xl mx-auto"
+      className="bg-[#111111] px-2 md:pt-12 max-w-screen-xl mx-auto"
     >
       <h1 className="text-lg md:text-3xl font-bold text-center mb-3 md:mb-8 text-white">
         Latest Projects

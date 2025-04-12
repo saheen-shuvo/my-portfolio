@@ -63,8 +63,8 @@ const ShuvoBites = () => {
             </span>
             <br></br>
             <span className="text-gray-300">
-              Payment Gateway Integration: Integrate Stripe or SSLCommerz for
-              secure online payments
+              Payment Gateway Integration: Integrate SSLCommerz for secure
+              online payments
               <br></br>Mobile App Version: Launch a React Native-based mobile
               app for Android & iOS categories<br></br>Product Categories &
               Filtering: Expanding the catalog with filtering options for better
@@ -73,8 +73,18 @@ const ShuvoBites = () => {
               English, Bangla) for broader user reach
             </span>
           </p>
+          <p className="py-3  text-sm md:text-base">
+            Visit Source Code:{" "}
+            <span className=" link text-blue-400 hover:text-orange-500">
+              <a target="_blank"  href="https://github.com/saheen-shuvo/shuvo-bites-client">Client Side Code</a>
+            </span>{" "}
+            ||{" "}
+            <span className="link text-blue-400 hover:text-orange-500">
+              <a target="_blank" href="https://github.com/saheen-shuvo/shuvo-bites-server">Server Side Code</a>
+            </span>
+          </p>
           <div className="flex justify-center my-6">
-            <a className="" href="https://shuvo-bites.web.app">
+            <a target="_blank" className="" href="https://shuvo-bites.web.app">
               {" "}
               <button className="bg-[#FFFFFF] btn text-[#0D0D0D] hover:bg-[#E6E6E6] font-semibold px-4 py-2 rounded-lg transition duration-300 w-full">
                 Visit Now <MdArrowOutward />
