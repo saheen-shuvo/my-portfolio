@@ -9,7 +9,7 @@ const Contact = () => {
       id="contact"
       className="bg-[#111111] px-4 py-12 max-w-screen-xl mx-auto"
     >
-      <h2 className="text-3xl font-bold text-center text-white mb-6">
+      <h2 className="text-lg md:text-4xl font-bold text-center text-white mb-6">
         Contact Me
       </h2>
 

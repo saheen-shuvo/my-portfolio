@@ -79,12 +79,12 @@ const Shuvolingo = () => {
           <div className="flex justify-center my-6">
             <a target="_blank" className="" href="https://shuvolingo-client.web.app/">
               {" "}
-              <button className="bg-[#FFFFFF] btn text-[#0D0D0D] hover:bg-[#E6E6E6] font-semibold px-4 py-2 rounded-lg transition duration-300 w-full">
+              <button  id="intro-btn" className="bg-[#FFFFFF] btn btn-sm md:btn-md text-[#0D0D0D] hover:bg-[#E6E6E6] font-semibold px-4 py-2 rounded-lg transition duration-300 w-full">
                 Visit Now <MdArrowOutward />
               </button>
             </a>
             <Link to="/">
-              <button className="bg-[#FFFFFF] btn text-[#0D0D0D] hover:bg-[#E6E6E6] font-semibold px-4 py-2 rounded-lg transition duration-300 ml-2">
+              <button  id="intro-btn" className="bg-[#FFFFFF] btn btn-sm md:btn-md text-[#0D0D0D] hover:bg-[#E6E6E6] font-semibold px-4 py-2 rounded-lg transition duration-300 ml-2">
                 Go Home <GoHome />
               </button>
             </Link>
