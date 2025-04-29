@@ -5,6 +5,14 @@ import { FaFacebookF, FaGithub } from "react-icons/fa";
 import { GrLinkedinOption } from "react-icons/gr";
 
 const Into = () => {
+  const handleDownload = () => {
+    const link = document.createElement("a");
+    link.href = "/Resume of Saheen Alam Shuvo.pdf";
+    link.setAttribute("download", "Resume of Saheen Alam Shuvo.pdf");
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  };
   return (
     <div
       id="home"
@@ -56,6 +64,7 @@ const Into = () => {
               <a
                 className="social-btn text-[8px] md:text-lg p-1 lg:p-2 border-1 md:border-2 border-white"
                 href="https://www.facebook.com/share/1BYWbr36dS/?mibextid=wwXIfr"
+                target="_blank"
               >
                 <FaFacebookF />
               </a>
@@ -63,6 +72,7 @@ const Into = () => {
               <a
                 className="social-btn text-[8px] md:text-lg p-1 lg:p-2 border-1 md:border-2 border-white"
                 href="https://github.com/saheen-shuvo"
+                target="_blank"
               >
                 {" "}
                 <FaGithub />
@@ -71,12 +81,14 @@ const Into = () => {
               <a
                 className="social-btn text-[8px] md:text-lg p-1 lg:p-2 border-1 md:border-2 border-white"
                 href="https://www.linkedin.com/in/saheen-alam-shuvo-182-li/"
+                target="_blank"
               >
                 <GrLinkedinOption />
               </a>
             </div>
             <div className="mt-1 lg:mt-8">
               <button
+                onClick={handleDownload}
                 id="intro-btn"
                 className="text-[8px] md:text-[12px] px-[4px] md:px-[10px] py-[2px] md:py-[6px] font-semibold rounded-lg md:rounded-2xl"
               >

@@ -10,17 +10,26 @@ const Projects = () => {
   return (
     <div
       id="projects"
-      className="bg-[#111111] px-2 md:px-4 md:pt-12 max-w-screen-xl mx-auto"
+      className="bg-[#111111] px-2 md:px-4 md:pt-12 max-w-screen-xl mx-auto scroll-mt-4"
     >
       <motion.h1
         initial={{ opacity: 0, y: 50 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, amount: 0.2 }}
         transition={{ duration: 0.6, ease: "easeOut" }}
-        className="text-lg md:text-4xl font-bold text-center mb-3 md:mb-8 text-white"
+        className="text-lg md:text-4xl font-bold text-center mb-3 md:mb-4 text-white"
       >
         My Latest Projects
       </motion.h1>
+      <motion.p
+        initial={{ opacity: 0, y: 50 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, amount: 0.2 }}
+        transition={{ duration: 0.6, ease: "easeOut" }}
+        className="text-sm text-gray-400 mb-6 text-center"
+      >
+        A Glimpse of What I’ve Built Recently
+      </motion.p>
       <div className="grid gap-4 grid-cols-1 md:grid-cols-3">
         {/* PROJECT 1 */}
         <motion.div

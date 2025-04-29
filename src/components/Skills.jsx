@@ -68,6 +68,15 @@ const Skills = () => {
       >
         My Stacks & Technologies
       </motion.h1>
+      <motion.p
+        initial={{ opacity: 0, y: 50 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, amount: 0.2 }}
+        transition={{ duration: 0.6, ease: "easeOut" }}
+        className="text-sm text-gray-400 mb-5 text-center"
+      >
+        Languages, Libraries & Frameworks I Work With
+      </motion.p>
 
       <div className="relative w-full h-20 md:h-32 overflow-hidden">
         {/* LARGE SCREEN */}

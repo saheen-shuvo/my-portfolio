@@ -48,12 +48,24 @@ const Contact = () => {
       className=" bg-[#111111] px-2 lg:px-4 py-12 max-w-screen-xl mx-auto"
       id="contact"
     >
-      <h2 className="text-lg md:text-4xl font-bold text-center text-white mb-2 md:mb-4">
+      <motion.h2
+        initial={{ opacity: 0, y: 50 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, amount: 0.2 }}
+        transition={{ duration: 0.6, ease: "easeOut" }}
+        className="text-lg md:text-4xl font-bold text-center text-white mb-2 md:mb-4"
+      >
         Contact Me
-      </h2>
-      <p className="text-xs md:text-lg mb-4 text-center">
+      </motion.h2>
+      <motion.p
+        initial={{ opacity: 0, y: 50 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, amount: 0.2 }}
+        transition={{ duration: 0.6, ease: "easeOut" }}
+        className="text-sm text-gray-400 mb-4 text-center"
+      >
         Feel free to reach out for any questions or collaborations.
-      </p>
+      </motion.p>
       <motion.div
         initial={{ opacity: 0, scale: 0.7, y: 50 }}
         whileInView={{ opacity: 1, scale: 1, y: 0 }}
@@ -67,7 +79,7 @@ const Contact = () => {
       >
         {/* Left */}
         <div className="flex-1">
-          <h1 className="pl-4 text-lg md:text-2xl font-semibold pb-4">
+          <h1 className="pl-4 text-lg md:text-2xl font-bold pb-4">
             Contact Information
           </h1>
           <div className="pl-4 flex flex-col gap-3 text-lg">
@@ -90,7 +102,7 @@ const Contact = () => {
         </div>
         {/*Right */}
         <div className="flex-1">
-          <h1 className="pl-4 text-lg md:text-2xl font-semibold pb-4 mt-8 lg:mt-0">
+          <h1 className="pl-4 text-lg md:text-2xl font-bold pb-4 mt-8 lg:mt-0">
             Send Me a Message
           </h1>
           <div>

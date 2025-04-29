@@ -29,6 +29,15 @@ const About = () => {
       >
         About Me
       </motion.h1>
+      <motion.p
+        initial={{ opacity: 0, y: 50 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, amount: 0.2 }}
+        transition={{ duration: 0.6, ease: "easeOut" }}
+        className="text-sm text-gray-400 mb-4 text-center"
+      >
+        Passion, Purpose & Profession
+      </motion.p>
       <p className=" text-[10px] md:text-lg text-gray-400 text-justify leading-relaxed">
         <motion.span
           initial="hidden"

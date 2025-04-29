@@ -2,6 +2,15 @@ import React from "react";
 import { motion } from "framer-motion";
 
 const Navbar = () => {
+  const handleDownload = () => {
+    const link = document.createElement("a");
+    link.href = "/Resume of Saheen Alam Shuvo.pdf";
+    link.setAttribute("download", "Resume of Saheen Alam Shuvo.pdf");
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  };
+
   const links = (
     <>
       <li className="font-semibold">
@@ -73,6 +82,7 @@ const Navbar = () => {
         </div>
         <div className="navbar-end">
           <button
+            onClick={handleDownload}
             id="nav-btn"
             className="bg-[#FFFFFF] btn btn-sm md:btn-md text-[#0D0D0D] hover:bg-[#E6E6E6] font-semibold px-4 py-2 rounded-lg transition duration-300 md:mr-4 mr-2"
           >
