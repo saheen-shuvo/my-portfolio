@@ -1,95 +1,132 @@
 import React from "react";
-import linkedInIcon from "../assets/images/linkedIn icon.png";
-import gitHubIcon from "../assets/images/gitHub icon1.png";
-import facebookIcon from "../assets/images/fb icon.png";
+import { FaGithub, FaLocationDot, FaPhone } from "react-icons/fa6";
+import { IoLogoWhatsapp } from "react-icons/io";
+import { MdEmail } from "react-icons/md";
+import { useRef } from "react";
+import emailjs from "@emailjs/browser";
+import Swal from "sweetalert2";
+import { motion } from "framer-motion";
 
 const Contact = () => {
+  const form = useRef();
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    if (!form.current) {
+      console.error("Form reference is null.");
+      return;
+    }
+
+    const formData = new FormData(form.current);
+    console.log("Form Data:", Object.fromEntries(formData));
+
+    emailjs
+      .sendForm(
+        import.meta.env.VITE_EMAIL_SERVICE_ID,
+        import.meta.env.VITE_EMAIL_TEMPLATE_ID,
+        form.current,
+        {
+          publicKey: import.meta.env.VITE_EMAIL_PUBLIC_KEY,
+        }
+      )
+      .then(
+        () => {
+          Swal.fire("Success!", "Email Sent successfully", "success");
+        },
+        (error) => {
+          Swal.fire(
+            "Failed!",
+            `Could not send email: ${error.text}`,
+            "warning"
+          );
+        }
+      );
+  };
   return (
-    <section
+    <div
+      className=" bg-[#111111] px-2 lg:px-4 py-12 max-w-screen-xl mx-auto"
       id="contact"
-      className="bg-[#111111] px-4 py-12 max-w-screen-xl mx-auto"
     >
-      <h2 className="text-lg md:text-4xl font-bold text-center text-white mb-6">
+      <h2 className="text-lg md:text-4xl font-bold text-center text-white mb-2 md:mb-4">
         Contact Me
       </h2>
-
-      <div className="max-w-screen-md mx-auto text-center text-white">
-        <p className="text-lg mb-4">
-          Feel free to reach out for any questions or collaborations.
-        </p>
-
-        {/* Email Address */}
-        <div className="mb-4">
-          <h3 className="text-xl font-semibold">Email:</h3>
-          <p className="text-lg">
-            <a
-              href="mailto:your-email@example.com"
-              className="text-blue-500 hover:underline"
-            >
-              saheenshuvo182@gmail.com
-            </a>
-          </p>
+      <p className="text-xs md:text-lg mb-4 text-center">
+        Feel free to reach out for any questions or collaborations.
+      </p>
+      <motion.div
+        initial={{ opacity: 0, scale: 0.7, y: 50 }}
+        whileInView={{ opacity: 1, scale: 1, y: 0 }}
+        viewport={{ once: true, amount: 0.05 }}
+        transition={{
+          duration: 1.2,
+          ease: [0.22, 1, 0.36, 1],
+        }}
+        id="intro-container"
+        className="border-2 border-yellow-400 mt-8 flex flex-col lg:flex-row px-4 lg:px-8 py-8 rounded-xl lg:rounded-3xl"
+      >
+        {/* Left */}
+        <div className="flex-1">
+          <h1 className="pl-4 text-lg md:text-2xl font-semibold pb-4">
+            Contact Information
+          </h1>
+          <div className="pl-4 flex flex-col gap-3 text-lg">
+            <p className="flex items-center gap-2">
+              <FaLocationDot /> Sector 12, Uttara, Dhaka, Bangladesh
+            </p>
+            <p className="flex items-center gap-2">
+              <MdEmail /> saheenshuvo182@gmail.com
+            </p>
+            <p className="flex items-center gap-2">
+              <FaGithub /> saheen-shuvo
+            </p>
+            <p className="flex items-center gap-2">
+              <FaPhone /> +8801751967704
+            </p>
+            <p className="flex items-center gap-2">
+              <IoLogoWhatsapp /> +8801751967704
+            </p>
+          </div>
         </div>
+        {/*Right */}
+        <div className="flex-1">
+          <h1 className="pl-4 text-lg md:text-2xl font-semibold pb-4 mt-8 lg:mt-0">
+            Send Me a Message
+          </h1>
+          <div>
+            <div className="">
+              <form ref={form} onSubmit={sendEmail} className="w-full px-4">
+                <label className="block text-gray-300 font-medium mb-1">
+                  Email
+                </label>
+                <input
+                  type="email"
+                  name="user_email"
+                  className="w-full p-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400"
+                  required
+                />
 
-        {/* Phone Number (optional) */}
-        <div className="mb-4">
-          <h3 className="text-xl font-semibold">What's App:</h3>
-          <p className="text-lg">
-            <a href="tel:+1234567890" className="text-blue-500 hover:underline">
-              +8801751967704
-            </a>
-          </p>
-        </div>
+                <label className="block text-gray-300 font-medium mt-3 mb-1">
+                  Message
+                </label>
+                <textarea
+                  name="message"
+                  className="w-full p-2 border border-gray-300 rounded-lg h-28 resize-none focus:outline-none focus:ring-2 focus:ring-blue-400"
+                  required
+                ></textarea>
 
-        {/* Social Media Links */}
-        <h3 className="text-xl font-semibold">Get in Touch:</h3>
-        <div className="flex justify-center items-center gap-1 mt-1 md:mb-5">
-          {/* Facebook */}
-          <a href="https://www.facebook.com/share/1BYWbr36dS/?mibextid=wwXIfr">
-            {" "}
-            <button>
-              <img className="w-[26px] md:w-[50px]" src={facebookIcon} alt="" />
-            </button>
-          </a>
-          {/* Github */}
-          <a href="https://github.com/saheen-shuvo">
-            {" "}
-            <button>
-              <img className="w-6 md:w-12" src={gitHubIcon} alt="" />
-            </button>
-          </a>
-          {/* LinkedIn */}
-          <a href="https://www.linkedin.com/in/saheen-alam-shuvo-182-li/">
-            <button>
-              <img className="w-6 md:w-12" src={linkedInIcon} alt="" />
-            </button>
-          </a>
+                <input
+                  type="submit"
+                  value="Send"
+                  id="intro-btn"
+                  className="btn px-12 w-full text-white py-2 mt-4 rounded-lg"
+                />
+              </form>
+            </div>
+          </div>
         </div>
-
-        {/* Optional: Contact Form */}
-        <div>
-          <h3 className="text-xl font-semibold">Send a Message:</h3>
-          <form
-            action="mailto:saheenshuvo182@gmail.com"
-            method="POST"
-            encType="text/plain"
-          >
-            <textarea
-              name="message"
-              rows="4"
-              className="w-full p-2 my-4 text-gray-300 border-2 border-gray-500 rounded-lg"
-              placeholder="Write your message here"
-            ></textarea>
-            <button
-              type="submit"
-              className="bg-[#FFFFFF] btn text-[#0D0D0D] hover:bg-[#E6E6E6] font-semibold px-4 py-2 rounded-lg transition duration-300 "
-            >
-              Send Message
-            </button>
-          </form>
-        </div>
-      </div>
-    </section>
+      </motion.div>
+    </div>
   );
 };
 
